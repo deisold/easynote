@@ -1,0 +1,4 @@
+<resources>
+    <integer name="detail_activity_text_editable_max_length">200</integer>
+
+</resources>

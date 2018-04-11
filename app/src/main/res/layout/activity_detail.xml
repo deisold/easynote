@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+    android:layout_marginStart="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".usecases.detail.DetailActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/activity_detail_title_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/activity_detail_title"
+            style="@style/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/detail_activity_title_hint"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/activity_detail_text_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/activity_detail_last_modified"
+        android:layout_below="@+id/activity_detail_title_wrapper"
+        >
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/activity_detail_text"
+            style="@style/texte"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/activity_detail_last_modified"
+            android:layout_below="@+id/activity_detail_title"
+            android:layout_marginBottom="@dimen/one_unit"
+            android:layout_marginTop="@dimen/two_units"
+            android:hint="@string/detail_activity_text_hint"
+            android:maxLength="@integer/detail_activity_text_editable_max_length"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/activity_detail_last_modified"
+        style="@style/hints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        tools:text="@string/detail_activity_last_modified"
+        />
+
+</RelativeLayout>
